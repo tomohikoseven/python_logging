@@ -9,15 +9,11 @@ handlers:
     formatter: simple_fmt
     stream: ext://sys.stdout
   console_AAA:
-    class: logging.StreamHandler
-    level: DEBUG
-    formatter: simple_fmt
-    stream: ext://sys.stdout
+    class: logging.NullHandler
 loggers:
-  AAA:
+  AAA.BBB:
     level: DEBUG
     handlers: [console_AAA]
-    propagate: no
   root:
     level: DEBUG
     handlers: [console]

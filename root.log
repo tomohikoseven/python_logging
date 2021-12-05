@@ -1,4 +1,0 @@
-
-[2021/12/05 19:09:05][INFO](sample.py:8) info level log
-[2021/12/05 19:09:05][DEBUG](sample.py:9) debug level log
-[2021/12/05 19:09:05][INFO](functions.py:5) test func: info level log

@@ -1,14 +1,17 @@
-from logging import getLogger,config
+from logging import getLogger, config
 import yaml
 
 logger = getLogger(__name__)
 
+
 class AAA(object):
     def __init__(self):
-        self.logger = getLogger(self.__class__.__name__)
+        self.logger = getLogger('AAA.BBB')
         self.logger.debug("class name is {}".format(self.__class__.__name__))
+
     def do_something(self):
         self.logger.info("doing something")
+
 
 def main():
     aaa = AAA()
@@ -20,6 +23,8 @@ def main():
     logger.error('error message')
     logger.critical('critical message')
 
+
 if __name__ == "__main__":
-    config.dictConfig( yaml.load(open("logging1.yaml").read(), Loader=yaml.SafeLoader) )
+    config.dictConfig(
+        yaml.load(open("logging.yaml").read(), Loader=yaml.SafeLoader))
     main()
